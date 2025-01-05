@@ -1,18 +1,27 @@
 ﻿#include <iostream>
-int dzielenie(int x, int y, int c);
+
+//zrob to na funkcje i od poczatku zobacz na pulla requesta 
+// zrob menu do wyboru funkcji 
+// nieskonczona pentla chyba ze z 
 
 int main()
 {
     
     std::cout << "Podaj dwie liczby i symbol działania po spacji" << std::endl;
-    int x = 0;
-    int z = 0;
-    char y = '1';
-    int obliczenia = 0;
-
+    int x ;
+    int z ;
+    char y ;
+    int obliczenia ;
+poczatek:
+  
+    x = 0;
+    z = 0;
+    y = '1';
+    obliczenia = 0;
     std::cin >> x >> y;
     dziel0:
     std::cin >> z;
+    if (y =='1') { goto koniec; }
     switch(y)
     {
         case'+':
@@ -29,13 +38,23 @@ int main()
                 obliczenia = x / z;
             }
             else {
-                std::cout << "niemozna dzielic przez 0,podaj ponownie druga liczbe: ";
+                std::cout << "niemozna dzielic przez 0,podaj ponownie druga liczbe:";
                 goto dziel0;
             }
-            break;           
+            break;     
+        case'z':
+            goto koniec;
     }if (z != 0) {
-        std::cout << "wynik twojego działania to:" << obliczenia;
+        std::cout << "wynik twojego działania to:" << obliczenia << std::endl;
+        std::cout << "Jeżeli chcesz kontynuoowac podaj kolejne dwie liczby wraz ze znakiem dzialania w przeciwnym razie zamknij program" << std::endl;
+        goto poczatek;
     }
+    else {
+        std::cout << "Podałes zły znak, sprobuj ponownie\n"<<"Podaj dwie liczby i symbol działania po spacji";
+        goto poczatek;
+    }
+   
+    koniec:
 
     return 0;
 
