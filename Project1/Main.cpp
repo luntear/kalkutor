@@ -1,6 +1,9 @@
 ﻿#include <iostream>
-int dzielenie(int x, int y, int c);
-
+//zmiana typu wyjsciowego na float - dzielenie wiaze sie czesto z liczbami po przecinku.
+float dzielenie(int x, int y);
+int mnozenie (int x, int y);
+int dodawanie(int x, int y);
+int odejmowanie(int x, int y); 
 int main()
 {
     
