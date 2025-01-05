@@ -1,5 +1,5 @@
 ﻿#include <iostream>
-//zmiana typu wyjsciowego na float - dzielenie wiaze sie czesto z liczbami po przecinku.
+//zmiana typu wyjsciowego na float - dzielenie wiaze sie czesto z liczbami po przecinku bo tak.
 float dzielenie(int x, int y);
 int mnozenie (int x, int y);
 int dodawanie(int x, int y);
